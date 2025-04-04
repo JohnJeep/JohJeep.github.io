@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Leaning Computer Science Journey</title><meta name="author" content="John Jeep"><meta name="copyright" content="John Jeep"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="This is a blog about my leaning computer science journey.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Leaning Computer Science Journey">
+<meta property="og:url" content="https://johnjeep.github.io/page/13/index.html">
+<meta property="og:site_name" content="Leaning Computer Science Journey">
+<meta property="og:description" content="This is a blog about my leaning computer science journey.">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://johnjeep.github.io/img/butterfly-icon.png">
+<meta property="article:author" content="John Jeep">
+<meta property="article:tag" content="computer, journey">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://johnjeep.github.io/img/butterfly-icon.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://johnjeep.github.io/page/13/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":150,"languages":{"author":"作者: John Jeep","link":"链接: ","source":"来源: Leaning Computer Science Journey","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Leaning Computer Science Journey',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'home'
+}</script><link rel="stylesheet" href="/custom.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">262</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">289</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">56</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="full_page fixed" id="page-header" style="background-image: url(/img/seele.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="site-info"><h1 id="site-title">Leaning Computer Science Journey</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/xxxxx@gmail.com" target="_blank" title="Gmail"><i class="fa-solid fa-bell" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Linux/Linux/valgrind/" title="valgrind">valgrind</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Linux/">Linux</a></span></div><div class="content">  1. 简介Valgrind 是 Linux 下进行内存泄露检测和性能分析的工具。 2. 用法 Valgrind包含下列工具  Memcheck：是一个内存错误检测器(detector)，检查程序中的内存问题，如泄漏、越界、非法指针等，让你的程序更正确。 Cachegrind：是一Cache和分支预测分析器(branch-prediction profiler)，分析CPU的cache命中率、丢失率，用于进行代码优化，让你的程序运行的更快。 Callgrind：是一个图形化调用生成Cache的分析器(profiler)，检测程序代码的运行时间和调用过程，以及分析程序性能。 Helgrind：是一个线程错误检测器(detector)，用于检查多线程程序的竞态条件。 DRD：是一个线程错误检测器(detector)，跟 Helgrind 工具是相似的，但是它是使用不用的分析技术去找到很多不同的问题。 Massif：是一个堆(heap)分析器(profiler)，分析程序中使用了多少堆内存等信息，让你的程序使用更少的内存。 DHAT(dynamic heap analysis...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Markdown/Markdown/GreekAlphabet/" title="GreekAlphabet">GreekAlphabet</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown/">Markdown</a></span></div><div class="content"> 希腊字母表小写希腊字母$\alpha$  \alpha $\beta$  \beta $\gamma$  \gamma $\delta$  \delta $\epsilon$  \epsilon $\zeta$  \zeta $\eta$  \eta $\theta$  \theta $\iota$  \iota $\kappa$ \kappa $\lambda$  \lambda $\mu$  \mu $\nu$  \nu $\xi$  \xi $\omicron$  \omicro $\pi$  \pi $\rho$  \rho $\sigma$  \sigma $\tau$  \tau $\upsilon$  \upsilon $\phi$  \phi $\chi$  \chi $\psi$  \psi $\omega$  \omega 大写希腊字母$\Alpha$  \Alpha $\Beta$  \Beta $\Gamma$  \Gamma $\Delta$  \Delta $\Epsilon$  \Epsilon $\Zeta$  \Zeta $\Eta$ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Markdown/Markdown/Jupyter/" title="Jupyter">Jupyter</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown/">Markdown</a></span></div><div class="content">  1. jupyter 基础1.1. 命令模式下的单元格操作 L: 显示代码的行号 m: 将单元格变为 markdown 类型，在 markdown 类型的单元格内可以编写文档 y: 将单元格变为代码类型，在代码类型的单元格中输入 Python 代码 d: 按两下 d 按键删除单元格（删除当前的 cell：dd） z: 撤销最后删除单元格操作 a: 在当前单元格之上创建一个新的单元格 b: 在当前单元格之下创建一个新的单元格 x: 剪切当前单元格 c: 复制当前单元格 v: 在当前单元格之下粘贴剪切板中的单元格 shift+k: 将当前单元格上移 shift+j: 将当前单元格下移 shift+m: 与下面的单元合并 将当前的 cell 转化为具有一级标题的 maskdown：数字键 1 将当前的 cell 转化为具有二级标题的 maskdown：数字键 2 将当前的 cell 转化为具有三级标题的 maskdown：数字键 3  1.2. 编辑和运行 执行当前 cell，并自动跳到下一个 cell：Shift Enter 执行当前 cell，执行后不自动调转到下一个...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Markdown/Markdown/LaTex/" title="LaTex">LaTex</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown/">Markdown</a></span></div><div class="content">  1. LaTex1.1. 插入公式LaTeX 公式有两种，一种是用在正文中的，一种是单独命令的。正文中的公式用$...$ 来定义，单独显示的用 $$...$$ 来定义，其中 ... 表示的是LaTeX 的公式命令。 例如：  定义$f(x) &#x3D; \sum_{i&#x3D;0}^{N}\int_{a}^{b} g(t,i) \text{ d}t$. (行内公式)   定义$f(x)$如下（行间公式）:$$f(x) &#x3D; \sum_{i&#x3D;0}^{N}\int_{a}^{b} g(t,i) \text{ d}t{6}\tag{1}$$  \iint \limits_{-\infty}^{+\infty}  $\Longrightarrow$  $\iint \limits_{-\infty}^{+\infty}$ \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty}f(x,y) ,dx,dy $\Longrightarrow$ $\int_{-\infty}^{+\infty}...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Markdown/Markdown/TyporaMarkdown/" title="TyporaMarkdown">TyporaMarkdown</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Markdown/">Markdown</a></span></div><div class="content">  1. Typora使用手册1.1. Markdown 语法 段落：Ctrl + 0 一级到六级标题：Ctrl + 1 到 Ctrl + 6 加粗： Ctrl/Cmd + B 测试   斜体：Ctrl + I  测试   下划线：Ctrl + U  测试   删除线：Shift + Alt + 5 ~~ 测试 ~~   插入链接：Ctrl/Cmd + K 支持超链接 ：百度 本地链接：本地 文章内锚点，制作文章目录：第一章   行内代码：Ctrl/Cmd + Shift + `hello word! 代码块： Ctrl/Cmd + Shift + K1234#include &lt;stdio.h&gt;int main() &#123;    return 0;&#125; 插入图片： Ctrl/Cmd + Shift + I   插入表格：Ctrl + T 表格支持拖拽移动、网页端表格复制转换   2 5     1 4    3 6       无序列表： Ctrl/Cmd + Shift + ] 有序列表：Ctrl/Cmd + Shift +...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/MySQL/MySQL/ConnectPool/" title="ConnectPool">ConnectPool</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">连接池为什么要连接池？...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/MySQL/MySQL/MySQL/" title="MySQL">MySQL</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">  1. MySQL 介绍1.1. RDBMS（关系型数据库）一个关系型数据库由一个或数个表格组成。  冗余：存储两倍数据，冗余降低了性能，但提高了数据的安全性 主键：主键是唯一的。一个数据表中只能包含一个主键。使用主键来查询数据 外键：用于关联两个表。 复合键：复合键（组合键）将多个列作为一个索引键，一般用于复合索引 索引：使用索引可快速访问数据库表中的特定信息。索引是对数据库表中一列或多列的值进行排序的一种结构 参照完整性: 要求关系中不允许引用不存在的实体。目的是保证数据的一致性 DDL(Data Definition Languages) 语句：数据定义语言，这些语句定义了不同的数据段、数据库、表、列、索引等数据库对象的定义。常用的语句关键字主要包括 create、drop、alter 等。 DML(Data Manipulation Language) 语句：数据操纵语句，用于添加、删除、更新和查询数据库记录，并检查数据完整性，常用的语句关键字主要包括 insert、delete、udpate 和 select 等。 DCL(Data Control...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Network/Network/AbbrNetworkTerms/" title="AbbrNetworkTerms">AbbrNetworkTerms</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Network/">Network</a></span></div><div class="content">  常用网络术语缩写 URL: 统一资源定位符 (Uniform Resource Locator) DNS: 域名系统 (Domain Name System) ADSL: 非对称数字用户线路 (Asymmetric Digital Subscriber Line) 。它是一种利用架设在电线杆上的金属电话线来进行高速通信的技术，它的上行方向 (用户到互联网)和下行方向 (互联网到用户)的通信速率是不对称的。 FTTH: 光纤到户 (Fibre To The Home) IX: 互联网交换 (Internet eXchange) FTP: 文件传输协议 (File Transfer Protocol) HTTP: 超文本传送协议 (Hyper Text Transfer Protocol) 协议: 通信操作的规则定义称为协议 ( protocol) URI: 统一资源标识符 (Uniform Resource Identifier) ARP: 地址解析协议 (Address Resolution Protocol) 根据已知 IP 地址查询出相应的以太网 MAC 地址...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/MySQL/MySQL/sql-optimization/" title="sql-optimization">sql-optimization</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/MySQL/">MySQL</a></span></div><div class="content">慢SQL慢 SQL 产生的表现：  索引缺失 索引失效 无有效查询条件或条件缺失 多层临时表嵌套 强制使用性能差的索引  对线上环境产生的影响：出现事故偶发、用户体验差。 对数据库产生的影响：SQL 执行的越慢，消耗 CPU 资源或 IO 资源也会越大，大量的慢 SQL 查询可直接引发业务故障。 开启慢SQL查询日志 MyQL 默认是没有开启慢查询日志的，可以通过命令行或者修改 my.cnf 来开启。开启后对性能有一定的影响，生产环境不建议开启。 使用命令行开启，重启服务后慢查询就会失效；修改配置文件的方式，会一直生效。  1234首先是进入到 MySQL 的服务中查看下关于慢查询的配置 show variables like &#x27;slow_query_log%&#x27;;查看下默认的超时时间配置 show variables like &#x27;long_query_time%&#x27;;  命令行中修改 123456# 执行步骤先将超时时间修改为 3 秒 set global long_query_time=3;然后开启配置 set global...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/Network/Network/CustomTCPProtocol/" title="CustomTCPProtocol">CustomTCPProtocol</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/Network/">Network</a></span></div><div class="content">  基于TCP自定义协议References 基于传输层TCP协议，自定义实现一个应用层协议：https://www.cnblogs.com/ssyfj/p/14016931.html  </div></div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/12/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/#content-inner">12</a><span class="page-number current">13</span><a class="page-number" href="/page/14/#content-inner">14</a><span class="space">&hellip;</span><a class="page-number" href="/page/27/#content-inner">27</a><a class="extend next" rel="next" href="/page/14/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">John Jeep</div><div class="author-info-description">lifestyle is lazy, faster, thinking</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">262</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">289</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">56</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/JohnJeep/Learning-CS-Journey"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/xxxxx" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="/xxxxx@gmail.com" target="_blank" title="Gmail"><i class="fa-solid fa-bell" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Learning-CS-Journey/CONVENTION/" title="CONVENTION">CONVENTION</a><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Learning-CS-Journey/README/" title="README">README</a><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/Learning-CS-Journey/STARCHARTS/" title="STARCHARTS">STARCHARTS</a><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/AI/AI/AIGC/" title="AIGC">AIGC</a><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/AI/AI/ollama/" title="ollama">ollama</a><time datetime="2025-04-04T12:24:00.000Z" title="发表于 2025-04-04 20:24:00">2025-04-04</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+      <i class="fas fa-angle-right"></i></a>
+          </div>
+          <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/01-Virtualization/"><span class="card-category-list-name">01-Virtualization</span><span class="card-category-list-count">12</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/02-Concurrency/"><span class="card-category-list-name">02-Concurrency</span><span class="card-category-list-count">7</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/AI/"><span class="card-category-list-name">AI</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Assembly/"><span class="card-category-list-name">Assembly</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/C/"><span class="card-category-list-name">C</span><span class="card-category-list-count">42</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CMake/"><span class="card-category-list-name">CMake</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/CPU/"><span class="card-category-list-name">CPU</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/Chip/"><span class="card-category-list-name">Chip</span><span class="card-category-list-count">1</span></a></li>
+          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/18-struct-bytealigned/" style="font-size: 1.1em; color: #999">18_struct_bytealigned</a> <a href="/tags/rocketMQ/" style="font-size: 1.3em; color: #99a1ac">rocketMQ</a> <a href="/tags/%E6%89%BE%E5%87%BA%E6%95%B0%E7%BB%84%E4%B8%AD%E6%AF%94%E5%B7%A6%E8%BE%B9%E7%9A%84%E5%A4%A7%E6%AF%94%E5%8F%B3%E8%BE%B9%E7%9A%84%E5%B0%8F%E7%9A%84%E5%85%83%E7%B4%A0/" style="font-size: 1.1em; color: #999">找出数组中比左边的大比右边的小的元素</a> <a href="/tags/clock/" style="font-size: 1.1em; color: #999">clock</a> <a href="/tags/redisCluster/" style="font-size: 1.1em; color: #999">redisCluster</a> <a href="/tags/git-Internals/" style="font-size: 1.1em; color: #999">git-Internals</a> <a href="/tags/aI/" style="font-size: 1.3em; color: #99a1ac">aI</a> <a href="/tags/21-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E9%93%BE%E8%A1%A8/" style="font-size: 1.1em; color: #999">21-合并两个有序链表</a> <a href="/tags/technicalChoose/" style="font-size: 1.1em; color: #999">technicalChoose</a> <a href="/tags/35-snprintf/" style="font-size: 1.1em; color: #999">35_snprintf</a> <a href="/tags/concept/" style="font-size: 1.1em; color: #999">concept</a> <a href="/tags/13-Abstraction-Address-Space/" style="font-size: 1.1em; color: #999">13-Abstraction-Address-Space</a> <a href="/tags/designPattern/" style="font-size: 1.3em; color: #99a1ac">designPattern</a> <a href="/tags/42-declaration-defination/" style="font-size: 1.1em; color: #999">42_declaration_defination</a> <a href="/tags/aIGC/" style="font-size: 1.1em; color: #999">aIGC</a> <a href="/tags/crontab/" style="font-size: 1.1em; color: #999">crontab</a> <a href="/tags/41-fopen-open/" style="font-size: 1.1em; color: #999">41_fopen_open_</a> <a href="/tags/43-statistic-memory-usage/" style="font-size: 1.1em; color: #999">43_statistic_memory_usage</a> <a href="/tags/28-Thread-Lock/" style="font-size: 1.1em; color: #999">28-Thread-Lock</a> <a href="/tags/24-%E5%8F%8D%E8%BD%AC%E9%93%BE%E8%A1%A8/" style="font-size: 1.1em; color: #999">24-反转链表</a> <a href="/tags/shell/" style="font-size: 1.5em; color: #99a9bf">shell</a> <a href="/tags/7-segment-fault/" style="font-size: 1.1em; color: #999">7_segment_fault</a> <a href="/tags/networkPrimer/" style="font-size: 1.1em; color: #999">networkPrimer</a> <a href="/tags/aPI-Gateway/" style="font-size: 1.1em; color: #999">aPI-Gateway</a> <a href="/tags/c-SoftDesign/" style="font-size: 1.1em; color: #999">c++SoftDesign</a> <a href="/tags/cONVENTION/" style="font-size: 1.1em; color: #999">cONVENTION</a> <a href="/tags/c-Sheet/" style="font-size: 1.1em; color: #999">c++Sheet</a> <a href="/tags/probobuf/" style="font-size: 1.1em; color: #999">probobuf</a> <a href="/tags/actor/" style="font-size: 1.1em; color: #999">actor</a> <a href="/tags/releaseFeature/" style="font-size: 1.1em; color: #999">releaseFeature</a> <a href="/tags/introduce-perf/" style="font-size: 1.1em; color: #999">introduce-perf</a> <a href="/tags/laTex/" style="font-size: 1.1em; color: #999">laTex</a> <a href="/tags/15-%E4%B8%89%E6%95%B0%E4%B9%8B%E5%92%8C/" style="font-size: 1.1em; color: #999">15-三数之和</a> <a href="/tags/jetbrainsPlugins/" style="font-size: 1.1em; color: #999">jetbrainsPlugins</a> <a href="/tags/38-static/" style="font-size: 1.1em; color: #999">38_static</a> <a href="/tags/14-Interlude-Memory-API/" style="font-size: 1.1em; color: #999">14-Interlude-Memory-API</a> <a href="/tags/33-register-auto/" style="font-size: 1.1em; color: #999">33_register_auto</a> <a href="/tags/qt/" style="font-size: 1.3em; color: #99a1ac">qt</a> <a href="/tags/performance/" style="font-size: 1.3em; color: #99a1ac">performance</a> <a href="/tags/39-static/" style="font-size: 1.1em; color: #999">39_static</a></div></div><div class="card-widget card-archives">
+    <div class="item-headline">
+      <i class="fas fa-archive"></i>
+      <span>归档</span>
+      
+    </div>
+  
+    <ul class="card-archive-list">
+      
+        <li class="card-archive-list-item">
+          <a class="card-archive-list-link" href="/archives/2025/04/">
+            <span class="card-archive-list-date">
+              四月 2025
+            </span>
+            <span class="card-archive-list-count">262</span>
+          </a>
+        </li>
+      
+    </ul>
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">262</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-04-04T12:24:58.512Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By John Jeep</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.5</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: str => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: subtitleType => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        btf.getScript('https://cdn.jsdelivr.net/npm/typed.js/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  },
+  processSubtitle: (content, extraContents = []) => {
+    if (true) {
+      const sub = [].slice()
+
+      if (extraContents.length > 0) {
+        sub.unshift(...extraContents)
+      }
+
+      if (typeof content === 'string') {
+        sub.unshift(content)
+      } else if (Array.isArray(content)) {
+        sub.unshift(...content)
+      }
+
+      sub.length > 0 && typedJSFn.init(sub)
+    } else {
+      document.getElementById('subtitle').textContent = typeof content === 'string' ? content :
+        (Array.isArray(content) && content.length > 0 ? content[0] : '')
+    }
+  }
+}
+btf.addGlobalFn('pjaxSendOnce', () => { typed.destroy() }, 'typedDestroy')
+</script><script>function subtitleType () {
+  btf.getScript('https://sdk.jinrishici.com/v2/browser/jinrishici.js')
+    .then(() => {
+      jinrishici.load(result => {
+        if (result && result.data && result.data.content) {
+          typedJSFn.processSubtitle(result.data.content)
+        } else {
+          throw new Error('Failed to parse the return value of Jinrishici API')
+        }
+      })
+    })
+    .catch(err => {
+      console.error('Failed to get the Jinrishici API:', err)
+      typedJSFn.processSubtitle(0)
+    })
+}
+typedJSFn.run(subtitleType)
+</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>
